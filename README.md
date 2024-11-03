@@ -26,10 +26,10 @@ First, Install the dependencies:
 npm install
 ```
 
-Second, run the JSON API server to serve the JSON data:
+Second, run the JSON API server to retrieve the JSON data locally:
 
 ```
-`npm run serve`
+npm run serve
 ```
 
 (check here after runnning the command: http://localhost:5050)
