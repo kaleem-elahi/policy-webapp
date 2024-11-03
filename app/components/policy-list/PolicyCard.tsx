@@ -9,8 +9,8 @@ export interface Policy {
 }
 
 export const PolicyCard = ({ policy }: { policy: Policy }) => (
-  <div className="bg-white p-4 rounded-lg shadow">
-    <h3 className="text-lg font-semibold">{policy.title}</h3>
+  <div className="bg-white p-4 rounded-lg shadow hover:shadow-lg">
+    <h3 className="text-lg font-semibold text-orange-500">{policy.title}</h3>
     <p className="text-gray-700 mt-2">{policy.description}</p>
     <p className="text-sm text-gray-500 mt-2">
       <strong>Topic:</strong> {policy.topic}

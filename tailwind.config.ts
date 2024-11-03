@@ -6,6 +6,7 @@ const config: Config = {
     "./app/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: 'class', // Enable dark mode by using the 'class' strategy
   theme: {
     extend: {
       colors: {
