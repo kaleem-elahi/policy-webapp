@@ -32,7 +32,7 @@ Second, run the JSON API server to serve the JSON data:
 `npm run serve`
 ```
 
-(check here after runnning the command :http://localhost:3000)
+(check here after runnning the command: http://localhost:5050)
 
 Third, start the development server:
 
