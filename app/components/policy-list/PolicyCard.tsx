@@ -10,10 +10,6 @@ export interface Policy {
   status: string;
 }
 
-interface PolicyCardProps {
-  policy: Policy;
-}
-
 interface PolicyFieldProps {
   label: string;
   value: string;
@@ -25,7 +21,7 @@ const PolicyField = ({ label, value }: PolicyFieldProps) => (
   </p>
 );
 
-export const PolicyCard = ({ policy }: PolicyCardProps) => (
+export const PolicyCard = ({ policy }: { policy: Policy }) => (
   <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg dark:hover:shadow-grey-900">
     <h3 className=" font-semibold text-gray-700 dark:text-white">
       {policy.title}

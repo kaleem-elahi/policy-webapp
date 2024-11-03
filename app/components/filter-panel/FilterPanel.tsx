@@ -1,7 +1,12 @@
 import { Typography } from "antd";
 import React from "react";
 import { DatePicker, Select } from "antd";
-import { FilterPanelProps, Filters, FilterOption } from "./FilterPanel.types";
+import {
+  FilterPanelProps,
+  Filters,
+  FilterOption,
+  Option,
+} from "./FilterPanel.types";
 
 const { RangePicker } = DatePicker;
 
@@ -10,21 +15,12 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
   setFilters,
   filterOptions,
   resetFilters,
+  selectKey,
 }) => {
   const handleFilterChange = (
     name: keyof Filters,
-    option:
-      | {
-          value: string | number;
-          label: string;
-        }
-      | {
-          value: string | number;
-          label: string;
-        }[]
+    option: Option | Option[]
   ) => {
-    // find type of tis
-    // console.log(option);
     setFilters({
       ...filters,
       [name]: option,
@@ -61,6 +57,7 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
         {name.charAt(0).toUpperCase() + name.slice(1)}
       </label>
       <Select
+        key={selectKey + name}
         className="w-full"
         allowClear
         mode="multiple"
@@ -107,6 +104,7 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
           <label className="block font-semibold mb-1">Date Introduced</label>
           <RangePicker
             onChange={(_d, dateStrings) => handleDateChange(dateStrings)}
+            key={selectKey + "dateIntroduced"}
           />
         </div>
       </div>

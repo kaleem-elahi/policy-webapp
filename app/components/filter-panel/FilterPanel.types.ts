@@ -32,7 +32,7 @@ interface FilterObj {
     setFilters: (filters: Filters) => void;
     filterOptions: FilterOptions;
     resetFilters: () => void;
-  }
+    selectKey: number;}
   
 
   export type { FilterObj as FilterOption, FilterOptions, DateIntroduced, Option, Filters, FilterPanelProps }

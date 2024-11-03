@@ -1,7 +1,3 @@
-// components/StatusIndicator.js
-
-import React from "react";
-
 // Status color mappings
 const statusColors: { [key: string]: string } = {
   Introduced: "bg-blue-500",

@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef, useMemo, useCallback } from "react";
+import React, { useRef, useMemo, useEffect } from "react";
 import * as am5 from "@amcharts/amcharts5";
 import * as am5xy from "@amcharts/amcharts5/xy";
 import am5themes_Responsive from "@amcharts/amcharts5/themes/Responsive";
@@ -6,9 +6,8 @@ import am5themes_Dark from "@amcharts/amcharts5/themes/Dark";
 import { Policy } from "../policy-list/PolicyCard";
 import { useTheme } from "next-themes";
 
-const PolicyLineChart = React.memo(({ policies }: { policies: Policy[] }) => {
+const PolicyLineChart = ({ policies }: { policies: Policy[] }) => {
   const chartRef = useRef(null);
-  const rootRef = useRef<am5.Root>();
   const { theme } = useTheme();
 
   const transformPolicyData = useMemo(() => {
@@ -24,16 +23,27 @@ const PolicyLineChart = React.memo(({ policies }: { policies: Policy[] }) => {
       }
     });
 
-    return Object.entries(dateCounts)
+    const chartData = Object.entries(dateCounts)
       .map(([date, count]) => ({
         date: new Date(date).getTime(),
         count,
       }))
       .sort((a, b) => a.date - b.date);
+
+    return chartData;
   }, [policies]);
 
-  const createChart = useCallback(
-    (root: am5.Root) => {
+  useEffect(() => {
+    let root: am5.Root | undefined;
+
+    if (chartRef.current) {
+      root = am5.Root.new(chartRef.current);
+
+      const themeConfig =
+        theme === "light" ? am5themes_Responsive : am5themes_Dark;
+
+      root.setThemes([themeConfig.new(root)]);
+
       const chart = root.container.children.push(
         am5xy.XYChart.new(root, {
           panX: false,
@@ -56,7 +66,6 @@ const PolicyLineChart = React.memo(({ policies }: { policies: Policy[] }) => {
           tooltip: am5.Tooltip.new(root, {}),
         })
       );
-
       const yAxis = chart.yAxes.push(
         am5xy.ValueAxis.new(root, {
           maxDeviation: 1,
@@ -109,35 +118,17 @@ const PolicyLineChart = React.memo(({ policies }: { policies: Policy[] }) => {
 
       series.appear(1000);
       chart.appear(1000, 100);
-
-      return chart;
-    },
-    [transformPolicyData]
-  );
-
-  useLayoutEffect(() => {
-    if (!chartRef.current) return;
-
-    if (!rootRef.current) {
-      rootRef.current = am5.Root.new(chartRef.current);
     }
 
-    const root = rootRef.current;
-    root.setThemes([
-      theme === "light"
-        ? am5themes_Responsive.new(root)
-        : am5themes_Dark.new(root),
-    ]);
-
-    createChart(root);
-
     return () => {
-      root.dispose();
+      if (root) {
+        root.dispose();
+      }
     };
-  }, [theme, createChart]);
+  }, [transformPolicyData, theme]);
 
   return (
-    <div className="mt-28 max-w-7xl mx-auto py-6 px-4">
+    <div className="max-w-7xl mx-auto py-6 px-4">
       <h1 className="font-bold mb-4 text-gray-900 dark:text-gray-100">
         Policy Data Over Time
       </h1>
@@ -148,8 +139,5 @@ const PolicyLineChart = React.memo(({ policies }: { policies: Policy[] }) => {
       />
     </div>
   );
-});
-
-PolicyLineChart.displayName = "PolicyLineChart";
-
-export default PolicyLineChart;
+};
+export default React.memo(PolicyLineChart);
