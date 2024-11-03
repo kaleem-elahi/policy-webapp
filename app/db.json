@@ -2,6 +2,267 @@
   "policies": [
     {
       "id": 1,
+      "title": "Healthcare Accessibility Act",
+      "description": "Policy to ensure accessible healthcare for all.",
+      "topic": "Healthcare",
+      "location": "California",
+      "dateIntroduced": "2023-01-12",
+      "status": "Introduced"
+    },
+    {
+      "id": 2,
+      "title": "Environmental Protection Act",
+      "description": "Policy to protect natural habitats.",
+      "topic": "Environment",
+      "location": "Washington",
+      "dateIntroduced": "2022-06-20",
+      "status": "Passed"
+    },
+    {
+      "id": 3,
+      "title": "Economic Growth Strategy",
+      "description": "Policy to boost the state's economy.",
+      "topic": "Economy",
+      "location": "Texas",
+      "dateIntroduced": "2021-11-01",
+      "status": "Under consideration"
+    },
+    {
+      "id": 4,
+      "title": "Defense Modernization Plan",
+      "description": "Policy to upgrade defense capabilities.",
+      "topic": "Defense",
+      "location": "Florida",
+      "dateIntroduced": "2023-02-10",
+      "status": "Failed"
+    },
+    {
+      "id": 5,
+      "title": "Climate Change Mitigation",
+      "description": "Policy to reduce carbon emissions.",
+      "topic": "Environment",
+      "location": "California",
+      "dateIntroduced": "2022-04-18",
+      "status": "Introduced"
+    },
+    {
+      "id": 6,
+      "title": "Small Business Support Act",
+      "description": "Policy to assist small businesses.",
+      "topic": "Economy",
+      "location": "New York",
+      "dateIntroduced": "2021-09-15",
+      "status": "Passed"
+    },
+    {
+      "id": 7,
+      "title": "Primary Education Reform",
+      "description": "Policy to improve primary education standards.",
+      "topic": "Education",
+      "location": "Texas",
+      "dateIntroduced": "2023-05-30",
+      "status": "Under consideration"
+    },
+    {
+      "id": 8,
+      "title": "Public Health Funding Act",
+      "description": "Policy to increase funding for public health.",
+      "topic": "Healthcare",
+      "location": "New York",
+      "dateIntroduced": "2022-12-05",
+      "status": "Failed"
+    },
+    {
+      "id": 9,
+      "title": "Renewable Energy Subsidies",
+      "description": "Policy to subsidize renewable energy.",
+      "topic": "Environment",
+      "location": "Florida",
+      "dateIntroduced": "2023-08-24",
+      "status": "Introduced"
+    },
+    {
+      "id": 10,
+      "title": "Higher Education Accessibility",
+      "description": "Policy to make higher education more affordable.",
+      "topic": "Education",
+      "location": "California",
+      "dateIntroduced": "2021-07-12",
+      "status": "Passed"
+    },
+    {
+      "id": 11,
+      "title": "Defense Strategy Enhancement",
+      "description": "Policy to strengthen defense infrastructure.",
+      "topic": "Defense",
+      "location": "Texas",
+      "dateIntroduced": "2022-10-22",
+      "status": "Failed"
+    },
+    {
+      "id": 12,
+      "title": "Economic Recovery Initiative",
+      "description": "Policy to support economic recovery post-pandemic.",
+      "topic": "Economy",
+      "location": "Washington",
+      "dateIntroduced": "2023-09-01",
+      "status": "Under consideration"
+    },
+    {
+      "id": 13,
+      "title": "Clean Water Initiative",
+      "description": "Policy to improve water quality.",
+      "topic": "Environment",
+      "location": "New York",
+      "dateIntroduced": "2022-03-10",
+      "status": "Passed"
+    },
+    {
+      "id": 14,
+      "title": "Affordable Healthcare Act",
+      "description": "Policy to reduce healthcare costs.",
+      "topic": "Healthcare",
+      "location": "Florida",
+      "dateIntroduced": "2021-05-18",
+      "status": "Introduced"
+    },
+    {
+      "id": 15,
+      "title": "Vocational Education Support",
+      "description": "Policy to support vocational education programs.",
+      "topic": "Education",
+      "location": "California",
+      "dateIntroduced": "2023-06-10",
+      "status": "Under consideration"
+    },
+    {
+      "id": 16,
+      "title": "Military Personnel Benefits",
+      "description": "Policy to increase benefits for military personnel.",
+      "topic": "Defense",
+      "location": "Washington",
+      "dateIntroduced": "2022-02-25",
+      "status": "Failed"
+    },
+    {
+      "id": 17,
+      "title": "Green Energy Investment",
+      "description": "Policy to invest in green energy technology.",
+      "topic": "Environment",
+      "location": "California",
+      "dateIntroduced": "2023-11-03",
+      "status": "Introduced"
+    },
+    {
+      "id": 18,
+      "title": "Healthcare Quality Act",
+      "description": "Policy to improve healthcare service quality.",
+      "topic": "Healthcare",
+      "location": "Texas",
+      "dateIntroduced": "2022-08-13",
+      "status": "Passed"
+    },
+    {
+      "id": 19,
+      "title": "Defense Equipment Modernization",
+      "description": "Policy to modernize defense equipment.",
+      "topic": "Defense",
+      "location": "New York",
+      "dateIntroduced": "2023-01-29",
+      "status": "Failed"
+    },
+    {
+      "id": 20,
+      "title": "Economic Stimulus Act",
+      "description": "Policy to stimulate the economy.",
+      "topic": "Economy",
+      "location": "Florida",
+      "dateIntroduced": "2021-03-30",
+      "status": "Introduced"
+    },
+    {
+      "id": 21,
+      "title": "K-12 Education Improvement",
+      "description": "Policy to improve K-12 education standards.",
+      "topic": "Education",
+      "location": "Washington",
+      "dateIntroduced": "2023-05-12",
+      "status": "Under consideration"
+    },
+    {
+      "id": 22,
+      "title": "Public Health Research Act",
+      "description": "Policy to fund public health research.",
+      "topic": "Healthcare",
+      "location": "California",
+      "dateIntroduced": "2023-05-12",
+      "status": "Passed"
+    },
+    {
+      "id": 23,
+      "title": "Affordable Housing Act",
+      "description": "Policy to increase affordable housing.",
+      "topic": "Economy",
+      "location": "Texas",
+      "dateIntroduced": "2023-05-12",
+      "status": "Introduced"
+    },
+    {
+      "id": 24,
+      "title": "National Security Enhancement",
+      "description": "Policy to improve national security.",
+      "topic": "Defense",
+      "location": "New York",
+      "dateIntroduced": "2023-05-12",
+      "status": "Under consideration"
+    },
+    {
+      "id": 25,
+      "title": "Healthcare Expansion Act",
+      "description": "Policy to expand healthcare access.",
+      "topic": "Healthcare",
+      "location": "Washington",
+      "dateIntroduced": "2023-10-09",
+      "status": "Introduced"
+    },
+    {
+      "id": 26,
+      "title": "Environmental Education Program",
+      "description": "Policy to educate the public on environmental issues.",
+      "topic": "Education",
+      "location": "California",
+      "dateIntroduced": "2022-07-19",
+      "status": "Passed"
+    },
+    {
+      "id": 27,
+      "title": "Clean Energy Tax Incentives",
+      "description": "Policy to provide tax incentives for clean energy.",
+      "topic": "Environment",
+      "location": "Florida",
+      "dateIntroduced": "2021-08-23",
+      "status": "Failed"
+    },
+    {
+      "id": 28,
+      "title": "Health Equity Act",
+      "description": "Policy to address health inequities.",
+      "topic": "Healthcare",
+      "location": "New York",
+      "dateIntroduced": "2023-02-14",
+      "status": "Under consideration"
+    },
+    {
+      "id": 29,
+      "title": "Climate Resilience Plan",
+      "description": "Policy to improve resilience against climate change.",
+      "topic": "Environment",
+      "location": "Texas",
+      "dateIntroduced": "2022-10-27",
+      "status": "Introduced"
+    },
+    {
+      "id": 30,
       "title": "Environmental Policy",
       "description": "Policy to regulate environmental standards.",
       "topic": "Environment",
@@ -10,7 +271,7 @@
       "status": "Introduced"
     },
     {
-      "id": 2,
+      "id": 31,
       "title": "NY Healthcare Reform",
       "description": "Policy to improve healthcare services.",
       "topic": "Healthcare",
@@ -19,7 +280,7 @@
       "status": "Under consideration"
     },
     {
-      "id": 3,
+      "id": 32,
       "title": "Washington Education Improvement Act",
       "description": "Policy to enhance education quality.",
       "topic": "Education",
@@ -28,7 +289,7 @@
       "status": "Passed"
     },
     {
-      "id": 4,
+      "id": 33,
       "title": "Forest Policy",
       "description": "Policy to regulate environmental standards.",
       "topic": "Environment",
@@ -37,7 +298,7 @@
       "status": "Failed"
     },
     {
-      "id": 5,
+      "id": 34,
       "title": "Healthcare Reform",
       "description": "Policy to improve healthcare services.",
       "topic": "Healthcare",
@@ -46,7 +307,7 @@
       "status": "Under consideration"
     },
     {
-      "id": 6,
+      "id": 35,
       "title": "Education Improvement Act",
       "description": "Policy to enhance education quality.",
       "topic": "Education",
@@ -55,7 +316,7 @@
       "status": "Passed"
     },
     {
-      "id": 7,
+      "id": 36,
       "title": "Indian Defence Force Reform",
       "description": "Policy to improve Defence services.",
       "topic": "Defence",

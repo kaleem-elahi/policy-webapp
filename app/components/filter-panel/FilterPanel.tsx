@@ -57,7 +57,7 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
     placeholder: string
   ) => (
     <div>
-      <label className="block font-semibold mb-1">
+      <label className="block font-semibold mb-1 ">
         {name.charAt(0).toUpperCase() + name.slice(1)}
       </label>
       <Select
@@ -76,9 +76,21 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
   );
 
   return (
-    <div className="mt-20 max-w-7xl mx-auto py-6 px-4">
-      <h2 className="text-xl font-semibold mb-4">Filters</h2>
-      <div className="bg-white p-6 rounded-lg shadow grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
+    <div className=" max-w-7xl mx-auto py-6 px-4">
+      <div className="flex justify-between">
+        <h2 className=" font-semibold mb-4">Filters</h2>
+        {isFilterApplied() && (
+          <div>
+            <Typography.Link
+              onClick={resetFilters}
+              className="text-orange-500 align-middle"
+            >
+              Reset Filters
+            </Typography.Link>
+          </div>
+        )}
+      </div>
+      <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
         {renderFilterSelect("topics", filterOptions.topics, "Search Topics")}
         {renderFilterSelect(
           "statuses",
@@ -97,17 +109,6 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
             onChange={(_d, dateStrings) => handleDateChange(dateStrings)}
           />
         </div>
-
-        {isFilterApplied() && (
-          <div>
-            <Typography.Link
-              onClick={resetFilters}
-              className="text-orange-500 align-middle"
-            >
-              Reset Filters
-            </Typography.Link>
-          </div>
-        )}
       </div>
     </div>
   );
