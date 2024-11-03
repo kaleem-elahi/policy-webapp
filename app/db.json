@@ -1,0 +1,90 @@
+{
+  "policies": [
+    {
+      "id": 1,
+      "title": "Environmental Policy",
+      "description": "Policy to regulate environmental standards.",
+      "topic": "Environment",
+      "location": "California",
+      "dateIntroduced": "2023-01-10",
+      "status": "Introduced"
+    },
+    {
+      "id": 2,
+      "title": "NY Healthcare Reform",
+      "description": "Policy to improve healthcare services.",
+      "topic": "Healthcare",
+      "location": "New York",
+      "dateIntroduced": "2023-03-15",
+      "status": "Under consideration"
+    },
+    {
+      "id": 3,
+      "title": "Washington Education Improvement Act",
+      "description": "Policy to enhance education quality.",
+      "topic": "Education",
+      "location": "Washington",
+      "dateIntroduced": "2022-09-05",
+      "status": "Passed"
+    },
+    {
+      "id": 4,
+      "title": "Forest Policy",
+      "description": "Policy to regulate environmental standards.",
+      "topic": "Environment",
+      "location": "California",
+      "dateIntroduced": "2023-01-10",
+      "status": "Failed"
+    },
+    {
+      "id": 5,
+      "title": "Healthcare Reform",
+      "description": "Policy to improve healthcare services.",
+      "topic": "Healthcare",
+      "location": "New York",
+      "dateIntroduced": "2023-03-15",
+      "status": "Under consideration"
+    },
+    {
+      "id": 6,
+      "title": "Education Improvement Act",
+      "description": "Policy to enhance education quality.",
+      "topic": "Education",
+      "location": "Texas",
+      "dateIntroduced": "2022-09-05",
+      "status": "Passed"
+    },
+    {
+      "id": 7,
+      "title": "Indian Defence Force Reform",
+      "description": "Policy to improve Defence services.",
+      "topic": "Defence",
+      "location": "India",
+      "dateIntroduced": "2024-03-15",
+      "status": "Failed"
+    }
+  ],
+  "filterOptions": {
+    "topics": [
+      { "id": 1, "name": "Environment" },
+      { "id": 2, "name": "Healthcare" },
+      { "id": 3, "name": "Education" },
+      { "id": 4, "name": "Economy" },
+      { "id": 5, "name": "Defense" }
+    ],
+    "statuses": [
+      { "id": 1, "name": "Introduced" },
+      { "id": 2, "name": "Under consideration" },
+      { "id": 3, "name": "Passed" },
+      { "id": 4, "name": "Failed" }
+    ],
+    "locations": [
+      { "id": 1, "name": "California" },
+      { "id": 2, "name": "New York" },
+      { "id": 3, "name": "Texas" },
+      { "id": 4, "name": "Florida" },
+      { "id": 5, "name": "Washington" },
+      { "id": 6, "name": "India" }
+    ]
+  }
+}
