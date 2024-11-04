@@ -39,15 +39,14 @@ npm run serve
 
 (check here after runnning the command: http://localhost:5050)
 
-Third, start the development server:
+Third, Open new tab of terminal, start the development server by running this command:
 
 ```
 npm run dev
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
 ```
+visit [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-and Done 🚀 !
+and 
+Done 🚀 !
 
 # policy-webapp assignment
