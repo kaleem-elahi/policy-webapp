@@ -2,6 +2,11 @@
 
 A web application to visualize and filter policies using various criteria such as status, topic, and location. Features include a policy line chart, dark/light theme toggle, and filter reset functionality.
 
+![image](https://github.com/user-attachments/assets/a1750cb1-698c-4ee2-8284-0a96566ef841)
+
+![image](https://github.com/user-attachments/assets/26b1c10b-89e0-4834-aa2a-c402bc669f6b)
+
+
 ## Features
 
 - **Policy Filtering**: Filter policies by status, topic, and location.
