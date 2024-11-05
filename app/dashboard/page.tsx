@@ -20,8 +20,13 @@ export interface IPolicy {
 }
 
 export default function Dashboard({
-  initialPolicies,
-  initialFilterOptions,
+  initialPolicies = [],
+  initialFilterOptions = {
+    topics: [],
+    statuses: [],
+    locations: [],
+    dateIntroduced: { from: "", to: "" },
+  },
 }: {
   initialPolicies: IPolicy[];
   initialFilterOptions: IFiltersOptions;
