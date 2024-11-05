@@ -7,14 +7,21 @@ type FetchDualDataProps = {
 };
 
 async function fetchDualData(): Promise<FetchDualDataProps> {
+  const defaultFilterOptions: IFiltersOptions = {
+    topics: [],
+    statuses: [],
+    locations: [],
+    dateIntroduced: { from: "", to: "" },
+  };
+
   try {
     // dual api call
     const [policiesResponse, filterOptionsResponse] = await Promise.all([
       fetch("http://localhost:5050/policies", {
-        cache: "no-cache",
+        next: { revalidate: 60 },
       }),
       fetch("http://localhost:5050/filterDropdowns", {
-        cache: "no-cache",
+        next: { revalidate: 60 },
       }),
     ]);
 
@@ -27,18 +34,13 @@ async function fetchDualData(): Promise<FetchDualDataProps> {
 
     return {
       initialPolicies: policies,
-      initialFilterOptions: filterDropdowns,
+      initialFilterOptions: filterDropdowns || defaultFilterOptions,
     };
   } catch (error) {
     console.error("Error fetching policies:", error);
     return {
       initialPolicies: [],
-      initialFilterOptions: {
-        topics: [],
-        statuses: [],
-        locations: [],
-        dateIntroduced: { from: "", to: "" },
-      },
+      initialFilterOptions: defaultFilterOptions,
     };
   }
 }
