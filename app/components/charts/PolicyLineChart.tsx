@@ -1,12 +1,12 @@
 import React, { useRef, useMemo, useEffect } from "react";
 import * as am5 from "@amcharts/amcharts5";
 import * as am5xy from "@amcharts/amcharts5/xy";
-import am5themes_Responsive from "@amcharts/amcharts5/themes/Responsive";
+import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
 import am5themes_Dark from "@amcharts/amcharts5/themes/Dark";
-import { Policy } from "../policy-list/PolicyCard";
 import { useTheme } from "next-themes";
+import { IPolicy } from "../../dashboard/page";
 
-const PolicyLineChart = ({ policies }: { policies: Policy[] }) => {
+const PolicyLineChart = ({ policies }: { policies: IPolicy[] }) => {
   const chartRef = useRef(null);
   const { theme } = useTheme();
 
@@ -40,13 +40,13 @@ const PolicyLineChart = ({ policies }: { policies: Policy[] }) => {
       root = am5.Root.new(chartRef.current);
 
       const themeConfig =
-        theme === "light" ? am5themes_Responsive : am5themes_Dark;
+        theme === "light" ? am5themes_Animated : am5themes_Dark;
 
       root.setThemes([themeConfig.new(root)]);
 
       const chart = root.container.children.push(
         am5xy.XYChart.new(root, {
-          panX: false,
+          panX: true,
           panY: false,
           wheelX: "panX",
           wheelY: "zoomX",
@@ -68,10 +68,11 @@ const PolicyLineChart = ({ policies }: { policies: Policy[] }) => {
       );
       const yAxis = chart.yAxes.push(
         am5xy.ValueAxis.new(root, {
+          min: 1.1,
           maxDeviation: 1,
           renderer: am5xy.AxisRendererY.new(root, {
             pan: "zoom",
-            minGridDistance: 60,
+            minGridDistance: 100,
             minorGridEnabled: true,
           }),
         })
@@ -93,6 +94,8 @@ const PolicyLineChart = ({ policies }: { policies: Policy[] }) => {
       series.fills.template.setAll({
         visible: true,
         fillOpacity: 0.2,
+        fill: am5.color(0xd6e681),
+        stroke: am5.color(0xbabf95),
       });
 
       series.bullets.push((root, series) => {

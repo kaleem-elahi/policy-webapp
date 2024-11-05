@@ -1,14 +1,5 @@
+import { IPolicy } from "../../dashboard/page";
 import StatusIndicator from "./StatusIndicator";
-
-export interface Policy {
-  id: string;
-  title: string;
-  description: string;
-  topic: string;
-  location: string;
-  dateIntroduced: string;
-  status: string;
-}
 
 interface PolicyFieldProps {
   label: string;
@@ -21,7 +12,7 @@ const PolicyField = ({ label, value }: PolicyFieldProps) => (
   </p>
 );
 
-export const PolicyCard = ({ policy }: { policy: Policy }) => (
+export const PolicyCard = ({ policy }: { policy: IPolicy }) => (
   <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg dark:hover:shadow-grey-900">
     <h3 className=" font-semibold text-gray-700 dark:text-white">
       {policy.title}

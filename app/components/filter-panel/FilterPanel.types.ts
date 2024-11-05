@@ -1,38 +1,41 @@
-interface FilterObj {
-    id: string | number;
-    name: string;
+interface IFilterObj {
+    id?: number;
+    label?: string | number;
+    value?: number;
   }
   
-  interface FilterOptions {
-    topics: FilterObj[];
-    statuses: FilterObj[];
-    locations: FilterObj[];
-    dateIntroduced: { from: string, to: string }
+  interface IFiltersData {
+    topics: IFilterObj[];
+    statuses: IFilterObj[];
+    locations: IFilterObj[];
+    dateIntroduced?: { from?: string, to?: string };
   }
   
-  interface DateIntroduced {
+  interface IDateIntroduced {
     from: string;
     to: string;
   }
   
-  interface Option {
-    label: string;
-    value: number | string;
+  interface IOption {
+    id: number;
+    label: string | number;
+    value: number;
   }
   
-  interface Filters {
-    topics:  [];
-    statuses: Option[];
-    locations: Option[];
-    dateIntroduced: DateIntroduced;
+  interface IFiltersOptions {
+    topics:  IOption[];
+    statuses: IOption[];
+    locations: IOption[];
+    dateIntroduced: IDateIntroduced;
   }
   
-  interface FilterPanelProps {
-    filters: Filters;
-    setFilters: (filters: Filters) => void;
-    filterOptions: FilterOptions;
+  interface IFilterPanelProps {
+    filters: IFiltersOptions;
+    setFilters: (filters: IFiltersOptions) => void;
+    filterOptions: IFiltersOptions;
     resetFilters: () => void;
-    selectKey: number;}
+    selectKey: number;
+  }
   
 
-  export type { FilterObj as FilterOption, FilterOptions, DateIntroduced, Option, Filters, FilterPanelProps }
+  export type { IFilterObj, IFiltersData, IDateIntroduced, IOption, IFiltersOptions, IFilterPanelProps }

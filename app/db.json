@@ -2,19 +2,19 @@
   "policies": [
     {
       "id": 1,
-      "title": "Healthcare Accessibility Act",
-      "description": "Policy to ensure accessible healthcare for all.",
+      "title": "Indian Accessibility Act",
+      "description": "India Policy to ensure accessible healthcare for all.",
       "topic": "Healthcare",
-      "location": "California",
+      "location": "India",
       "dateIntroduced": "2023-01-12",
       "status": "Introduced"
     },
     {
       "id": 2,
-      "title": "Environmental Protection Act",
+      "title": "China Protection Act",
       "description": "Policy to protect natural habitats.",
       "topic": "Environment",
-      "location": "Washington",
+      "location": "China",
       "dateIntroduced": "2022-06-20",
       "status": "Passed"
     },
@@ -23,7 +23,7 @@
       "title": "Economic Growth Strategy",
       "description": "Policy to boost the state's economy.",
       "topic": "Economy",
-      "location": "Texas",
+      "location": "Pakistan",
       "dateIntroduced": "2021-11-01",
       "status": "Under consideration"
     },
@@ -32,7 +32,7 @@
       "title": "Defense Modernization Plan",
       "description": "Policy to upgrade defense capabilities.",
       "topic": "Defense",
-      "location": "Florida",
+      "location": "Palestine",
       "dateIntroduced": "2023-02-10",
       "status": "Failed"
     },
@@ -41,7 +41,7 @@
       "title": "Climate Change Mitigation",
       "description": "Policy to reduce carbon emissions.",
       "topic": "Environment",
-      "location": "California",
+      "location": "Sri Lanka",
       "dateIntroduced": "2022-04-18",
       "status": "Introduced"
     },
@@ -50,7 +50,7 @@
       "title": "Small Business Support Act",
       "description": "Policy to assist small businesses.",
       "topic": "Economy",
-      "location": "New York",
+      "location": "UAE",
       "dateIntroduced": "2021-09-15",
       "status": "Passed"
     },
@@ -59,7 +59,7 @@
       "title": "Primary Education Reform",
       "description": "Policy to improve primary education standards.",
       "topic": "Education",
-      "location": "Texas",
+      "location": "Pakistan",
       "dateIntroduced": "2023-05-30",
       "status": "Under consideration"
     },
@@ -68,7 +68,7 @@
       "title": "Public Health Funding Act",
       "description": "Policy to increase funding for public health.",
       "topic": "Healthcare",
-      "location": "New York",
+      "location": "UAE",
       "dateIntroduced": "2022-12-05",
       "status": "Failed"
     },
@@ -77,7 +77,7 @@
       "title": "Renewable Energy Subsidies",
       "description": "Policy to subsidize renewable energy.",
       "topic": "Environment",
-      "location": "Florida",
+      "location": "Palestine",
       "dateIntroduced": "2023-08-24",
       "status": "Introduced"
     },
@@ -86,7 +86,7 @@
       "title": "Higher Education Accessibility",
       "description": "Policy to make higher education more affordable.",
       "topic": "Education",
-      "location": "California",
+      "location": "Sri Lanka",
       "dateIntroduced": "2021-07-12",
       "status": "Passed"
     },
@@ -95,7 +95,7 @@
       "title": "Defense Strategy Enhancement",
       "description": "Policy to strengthen defense infrastructure.",
       "topic": "Defense",
-      "location": "Texas",
+      "location": "Pakistan",
       "dateIntroduced": "2022-10-22",
       "status": "Failed"
     },
@@ -104,7 +104,7 @@
       "title": "Economic Recovery Initiative",
       "description": "Policy to support economic recovery post-pandemic.",
       "topic": "Economy",
-      "location": "Washington",
+      "location": "Iraq",
       "dateIntroduced": "2023-09-01",
       "status": "Under consideration"
     },
@@ -113,7 +113,7 @@
       "title": "Clean Water Initiative",
       "description": "Policy to improve water quality.",
       "topic": "Environment",
-      "location": "New York",
+      "location": "UAE",
       "dateIntroduced": "2022-03-10",
       "status": "Passed"
     },
@@ -122,7 +122,7 @@
       "title": "Affordable Healthcare Act",
       "description": "Policy to reduce healthcare costs.",
       "topic": "Healthcare",
-      "location": "Florida",
+      "location": "Palestine",
       "dateIntroduced": "2021-05-18",
       "status": "Introduced"
     },
@@ -131,7 +131,7 @@
       "title": "Vocational Education Support",
       "description": "Policy to support vocational education programs.",
       "topic": "Education",
-      "location": "California",
+      "location": "Sri Lanka",
       "dateIntroduced": "2023-06-10",
       "status": "Under consideration"
     },
@@ -140,7 +140,7 @@
       "title": "Military Personnel Benefits",
       "description": "Policy to increase benefits for military personnel.",
       "topic": "Defense",
-      "location": "Washington",
+      "location": "Iraq",
       "dateIntroduced": "2022-02-25",
       "status": "Failed"
     },
@@ -149,7 +149,7 @@
       "title": "Green Energy Investment",
       "description": "Policy to invest in green energy technology.",
       "topic": "Environment",
-      "location": "California",
+      "location": "Sri Lanka",
       "dateIntroduced": "2023-11-03",
       "status": "Introduced"
     },
@@ -158,7 +158,7 @@
       "title": "Healthcare Quality Act",
       "description": "Policy to improve healthcare service quality.",
       "topic": "Healthcare",
-      "location": "Texas",
+      "location": "Pakistan",
       "dateIntroduced": "2022-08-13",
       "status": "Passed"
     },
@@ -167,7 +167,7 @@
       "title": "Defense Equipment Modernization",
       "description": "Policy to modernize defense equipment.",
       "topic": "Defense",
-      "location": "New York",
+      "location": "UAE",
       "dateIntroduced": "2023-01-29",
       "status": "Failed"
     },
@@ -176,7 +176,7 @@
       "title": "Economic Stimulus Act",
       "description": "Policy to stimulate the economy.",
       "topic": "Economy",
-      "location": "Florida",
+      "location": "Palestine",
       "dateIntroduced": "2021-03-30",
       "status": "Introduced"
     },
@@ -185,7 +185,7 @@
       "title": "K-12 Education Improvement",
       "description": "Policy to improve K-12 education standards.",
       "topic": "Education",
-      "location": "Washington",
+      "location": "Iraq",
       "dateIntroduced": "2023-05-12",
       "status": "Under consideration"
     },
@@ -194,7 +194,7 @@
       "title": "Public Health Research Act",
       "description": "Policy to fund public health research.",
       "topic": "Healthcare",
-      "location": "California",
+      "location": "Sri Lanka",
       "dateIntroduced": "2023-05-12",
       "status": "Passed"
     },
@@ -203,7 +203,7 @@
       "title": "Affordable Housing Act",
       "description": "Policy to increase affordable housing.",
       "topic": "Economy",
-      "location": "Texas",
+      "location": "Pakistan",
       "dateIntroduced": "2023-05-12",
       "status": "Introduced"
     },
@@ -212,7 +212,7 @@
       "title": "National Security Enhancement",
       "description": "Policy to improve national security.",
       "topic": "Defense",
-      "location": "New York",
+      "location": "UAE",
       "dateIntroduced": "2023-05-12",
       "status": "Under consideration"
     },
@@ -221,7 +221,7 @@
       "title": "Healthcare Expansion Act",
       "description": "Policy to expand healthcare access.",
       "topic": "Healthcare",
-      "location": "Washington",
+      "location": "Iraq",
       "dateIntroduced": "2023-10-09",
       "status": "Introduced"
     },
@@ -230,7 +230,7 @@
       "title": "Environmental Education Program",
       "description": "Policy to educate the public on environmental issues.",
       "topic": "Education",
-      "location": "California",
+      "location": "Sri Lanka",
       "dateIntroduced": "2022-07-19",
       "status": "Passed"
     },
@@ -239,7 +239,7 @@
       "title": "Clean Energy Tax Incentives",
       "description": "Policy to provide tax incentives for clean energy.",
       "topic": "Environment",
-      "location": "Florida",
+      "location": "Palestine",
       "dateIntroduced": "2021-08-23",
       "status": "Failed"
     },
@@ -248,7 +248,7 @@
       "title": "Health Equity Act",
       "description": "Policy to address health inequities.",
       "topic": "Healthcare",
-      "location": "New York",
+      "location": "UAE",
       "dateIntroduced": "2023-02-14",
       "status": "Under consideration"
     },
@@ -257,7 +257,7 @@
       "title": "Climate Resilience Plan",
       "description": "Policy to improve resilience against climate change.",
       "topic": "Environment",
-      "location": "Texas",
+      "location": "Pakistan",
       "dateIntroduced": "2022-10-27",
       "status": "Introduced"
     },
@@ -266,7 +266,7 @@
       "title": "Environmental Policy",
       "description": "Policy to regulate environmental standards.",
       "topic": "Environment",
-      "location": "California",
+      "location": "Sri Lanka",
       "dateIntroduced": "2023-01-10",
       "status": "Introduced"
     },
@@ -275,16 +275,16 @@
       "title": "NY Healthcare Reform",
       "description": "Policy to improve healthcare services.",
       "topic": "Healthcare",
-      "location": "New York",
+      "location": "UAE",
       "dateIntroduced": "2023-03-15",
       "status": "Under consideration"
     },
     {
       "id": 32,
-      "title": "Washington Education Improvement Act",
+      "title": "Iraq Education Improvement Act",
       "description": "Policy to enhance education quality.",
       "topic": "Education",
-      "location": "Washington",
+      "location": "Iraq",
       "dateIntroduced": "2022-09-05",
       "status": "Passed"
     },
@@ -293,7 +293,7 @@
       "title": "Forest Policy",
       "description": "Policy to regulate environmental standards.",
       "topic": "Environment",
-      "location": "California",
+      "location": "Sri Lanka",
       "dateIntroduced": "2023-01-10",
       "status": "Failed"
     },
@@ -302,7 +302,7 @@
       "title": "Healthcare Reform",
       "description": "Policy to improve healthcare services.",
       "topic": "Healthcare",
-      "location": "New York",
+      "location": "UAE",
       "dateIntroduced": "2023-03-15",
       "status": "Under consideration"
     },
@@ -311,7 +311,7 @@
       "title": "Education Improvement Act",
       "description": "Policy to enhance education quality.",
       "topic": "Education",
-      "location": "Texas",
+      "location": "Pakistan",
       "dateIntroduced": "2022-09-05",
       "status": "Passed"
     },
@@ -325,27 +325,28 @@
       "status": "Failed"
     }
   ],
-  "filterOptions": {
+  "filterDropdowns": {
     "topics": [
-      { "id": 1, "name": "Environment" },
-      { "id": 2, "name": "Healthcare" },
-      { "id": 3, "name": "Education" },
-      { "id": 4, "name": "Economy" },
-      { "id": 5, "name": "Defense" }
+      { "id": 1, "label": "Environment" },
+      { "id": 2, "label": "Healthcare" },
+      { "id": 3, "label": "Education" },
+      { "id": 4, "label": "Economy" },
+      { "id": 5, "label": "Defense" }
     ],
     "statuses": [
-      { "id": 1, "name": "Introduced" },
-      { "id": 2, "name": "Under consideration" },
-      { "id": 3, "name": "Passed" },
-      { "id": 4, "name": "Failed" }
+      { "id": 1, "label": "Introduced" },
+      { "id": 2, "label": "Under consideration" },
+      { "id": 3, "label": "Passed" },
+      { "id": 4, "label": "Failed" }
     ],
     "locations": [
-      { "id": 1, "name": "California" },
-      { "id": 2, "name": "New York" },
-      { "id": 3, "name": "Texas" },
-      { "id": 4, "name": "Florida" },
-      { "id": 5, "name": "Washington" },
-      { "id": 6, "name": "India" }
+      { "id": 1, "label": "Sri Lanka" },
+      { "id": 2, "label": "UAE" },
+      { "id": 3, "label": "Pakistan" },
+      { "id": 4, "label": "Palestine" },
+      { "id": 5, "label": "Iraq" },
+      { "id": 6, "label": "India" },
+      { "id": 7, "label": "China" }
     ]
   }
 }

@@ -1,59 +1,50 @@
-"use client";
+import { IFiltersOptions } from "./components/filter-panel/FilterPanel.types";
+import Dashboard, { IPolicy } from "./dashboard/page";
 
-import { useState, useMemo, useCallback } from "react";
-import { Header } from "./components/header/Header";
-import { PolicyList } from "./components/policy-list/PolicyList";
-import FilterPanel from "./components/filter-panel/FilterPanel";
-import { Filters } from "./components/filter-panel/FilterPanel.types";
-import { ThemeProvider } from "next-themes";
-import PolicyLineChart from "./components/charts/PolicyLineChart";
-import {
-  useFilteredPolicies,
-  useFilterOptions,
-  usePolicies,
-} from "./components/hooks";
+type FetchDualDataProps = {
+  initialPolicies: IPolicy[];
+  initialFilterOptions: IFiltersOptions;
+};
 
-export default function Home() {
-  const filterOptions = useFilterOptions();
-  const policies = usePolicies();
-  const [filters, setFilters] = useState<Filters>({
-    topics: [],
-    statuses: [],
-    locations: [],
-    dateIntroduced: { from: "", to: "" },
-  });
-  const [selectKey, setSelectKey] = useState(1); // for select filter
-  const filteredPolicies = useFilteredPolicies(policies, filters);
+async function fetchDualData(): Promise<FetchDualDataProps> {
+  try {
+    // dual api call
+    const [policiesResponse, filterOptionsResponse] = await Promise.all([
+      fetch("http://localhost:5050/policies", {
+        cache: "no-cache",
+      }),
+      fetch("http://localhost:5050/filterDropdowns", {
+        cache: "no-cache",
+      }),
+    ]);
 
-  // Reset filters function
-  const resetFilters = useCallback(() => {
-    setSelectKey(selectKey + 1);
-    setFilters({
-      topics: [],
-      statuses: [],
-      locations: [],
-      dateIntroduced: { from: "", to: "" },
-    });
-  }, [selectKey]);
+    const [policies, filterDropdowns] = await Promise.all([
+      policiesResponse.json(),
+      filterOptionsResponse.json(),
+    ]);
 
-  const memoizedFilteredPolicies = useMemo(
-    () => filteredPolicies,
-    [filteredPolicies]
-  );
+    console.log(policies);
 
-  return (
-    <ThemeProvider attribute="class">
-      <Header />
-      <div className="mt-28" />
-      <PolicyLineChart policies={memoizedFilteredPolicies} />
-      <FilterPanel
-        filters={filters}
-        setFilters={setFilters}
-        filterOptions={filterOptions}
-        resetFilters={resetFilters}
-        selectKey={selectKey}
-      />
-      <PolicyList policies={memoizedFilteredPolicies} />
-    </ThemeProvider>
-  );
+    return {
+      initialPolicies: policies,
+      initialFilterOptions: filterDropdowns,
+    };
+  } catch (error) {
+    console.error("Error fetching policies:", error);
+    return {
+      initialPolicies: [],
+      initialFilterOptions: {
+        topics: [],
+        statuses: [],
+        locations: [],
+        dateIntroduced: { from: "", to: "" },
+      },
+    };
+  }
+}
+
+export default async function Page() {
+  // Fetch the fetchDualData data on the server side
+  const initialProps = await fetchDualData();
+  return <Dashboard {...initialProps} />;
 }
