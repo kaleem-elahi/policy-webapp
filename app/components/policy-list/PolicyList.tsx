@@ -1,6 +1,7 @@
-import { PolicyCard, Policy } from "./PolicyCard";
+import { IPolicy } from "../../dashboard/page";
+import { PolicyCard } from "./PolicyCard";
 
-export const PolicyList = ({ policies }: { policies: Policy[] }) => {
+export const PolicyList = ({ policies }: { policies: IPolicy[] }) => {
   return (
     <div className="max-w-7xl mx-auto py-6 px-4">
       <h2 className=" font-semibold mb-4">Policies ({policies.length})</h2>

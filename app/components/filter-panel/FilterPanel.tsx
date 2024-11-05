@@ -2,25 +2,21 @@ import { Typography } from "antd";
 import React from "react";
 import { DatePicker, Select } from "antd";
 import {
-  FilterPanelProps,
-  Filters,
-  FilterOption,
-  Option,
+  IFilterPanelProps,
+  IFiltersOptions,
+  IOption,
 } from "./FilterPanel.types";
 
 const { RangePicker } = DatePicker;
 
-const FilterPanel: React.FC<FilterPanelProps> = ({
+const FilterPanel = ({
   filters,
   setFilters,
   filterOptions,
   resetFilters,
   selectKey,
-}) => {
-  const handleFilterChange = (
-    name: keyof Filters,
-    option: Option | Option[]
-  ) => {
+}: IFilterPanelProps) => {
+  const handleFilterChange = (name: string, option: IOption[] | IOption) => {
     setFilters({
       ...filters,
       [name]: option,
@@ -42,14 +38,17 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
       (filters.topics?.length ?? 0) > 0 ||
       (filters.statuses?.length ?? 0) > 0 ||
       (filters.locations?.length ?? 0) > 0 ||
-      filters.dateIntroduced.from !== "" ||
-      filters.dateIntroduced.to !== ""
+      filters?.dateIntroduced.from !== "" ||
+      filters?.dateIntroduced.to !== ""
     );
   };
 
   const renderFilterSelect = (
-    name: keyof Filters,
-    options: FilterOption[],
+    name: string,
+    options:
+      | IFiltersOptions["topics"]
+      | IFiltersOptions["statuses"]
+      | IFiltersOptions["locations"],
     placeholder: string
   ) => (
     <div>
@@ -63,11 +62,13 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
         mode="multiple"
         placeholder={placeholder}
         optionFilterProp="label"
-        options={options.map((option: FilterOption) => ({
+        options={options.map((option) => ({
           value: option.id,
-          label: option.name,
+          label: option.label,
         }))}
-        onChange={(_value, option) => handleFilterChange(name, option)}
+        onChange={(_value, option) =>
+          handleFilterChange(name, option as IOption[])
+        }
       />
     </div>
   );
@@ -111,5 +112,4 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
     </div>
   );
 };
-
 export default FilterPanel;
